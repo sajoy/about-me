@@ -1,14 +1,28 @@
 alert( 'hello' );
-alert( 'I know you can\'t read my bio yet, but take a stab at answering some questions about me. Ready?' );
 
-var name = prompt( 'First of all, what\'s your name?' );
+var name = prompt( 'What\'s your name?' );
 console.log( name ); // console out their name to see what it is
 alert( 'Nice to meet you, ' + name );
 
-var favIceCream = prompt( 'What do you think my favorite ice cream flavor is?' );
-console.log( favIceCream );
-alert( 'Really, ' + name + '? You think ' + favIceCream + ' is my favorite?' );
+alert( 'I know you can\'t read my bio yet, but take a stab at answering some questions about me. Ready?' );
 
-var wrong = confirm( 'Am I doing this lab right?' );
-console.log( wrong );
-alert( 'Thanks for thinking I\'m ' + wrong + 'y' );
+// TODO change to YES or NO questions
+var favIceCream = prompt( 'Is my favorite ice cream flavor blueberry?' );
+console.log( favIceCream );
+
+favIceCream = favIceCream.toLowerCase();
+if ( favIceCream == 'yes' || favIceCream == 'y ') {
+    alert( 'Bingo, ' + name + '!!' );
+} else {
+    alert( '...incorrect.' );
+}
+
+var wrong = prompt( 'Am I doing this lab right?' );
+wrong = wrong.toLowerCase();
+
+console.log( wrong, wrong == 'no' );
+if ( wrong === 'yes' || wrong === 'y' ) {
+    alert( 'are you sure??' );
+} else {
+    alert( 'Bonus points for being honest AND right.' );
+}
