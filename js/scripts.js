@@ -1,28 +1,29 @@
-alert( 'hello' );
+'use strict';
 
+// greet the user and ask for their name
+alert( 'hello' );``
 var name = prompt( 'What\'s your name?' );
-console.log( name ); // console out their name to see what it is
 alert( 'Nice to meet you, ' + name );
-
 alert( 'I know you can\'t read my bio yet, but take a stab at answering some questions about me. Ready?' );
 
-// TODO change to YES or NO questions
+// have user guess my favorite ice cream flavor
 var favIceCream = prompt( 'Is my favorite ice cream flavor blueberry?' );
-console.log( favIceCream );
+console.log( 'fav ice cream == bluberry: ' + favIceCream );
 
 favIceCream = favIceCream.toLowerCase();
 if ( favIceCream == 'yes' || favIceCream == 'y ') {
-    alert( 'Bingo, ' + name + '!!' );
+	alert( '...incorrect.' );
 } else {
-    alert( '...incorrect.' );
+	alert( 'Bingo, ' + name + '!!' + 'Blueberry is *not* my favorite.');
 }
 
-var wrong = prompt( 'Am I doing this lab right?' );
-wrong = wrong.toLowerCase();
+// ask user if I'm doing this correctly
+var followingInstructions = prompt( 'Am I doing this lab right?' );
+followingInstructions = followingInstructions.toLowerCase();
 
-console.log( wrong, wrong == 'no' );
-if ( wrong === 'yes' || wrong === 'y' ) {
-    alert( 'are you sure??' );
+console.log( 'following instructions: ', followingInstructions );
+if ( followingInstructions === 'no' || followingInstructions === 'n' ) {
+	alert( 'Bonus points for being honest AND right.' );
 } else {
-    alert( 'Bonus points for being honest AND right.' );
+	alert( 'Are you sure??' );
 }
